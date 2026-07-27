@@ -1,0 +1,6 @@
+{
+  "name": "CraftIQ — AI Business Companion for Handmade Entrepreneurs",
+  "description": "An intelligent AI business companion for handmade entrepreneurs, providing product branding, pricing strategies, customer persona analysis, marketing planning, and business consultation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
