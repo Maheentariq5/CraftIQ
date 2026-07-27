@@ -222,19 +222,19 @@ Never guarantee profits or financial success.
 
 ## Home Page
 
-![Home](screenshots/home.png)
+![Home](screenshots/home.png.png)
 
 ---
 
 ## Pricing Assistant
 
-![Pricing](screenshots/pricing.png)
+![Pricing](screenshots/pricing.png.png)
 
 ---
 
 ## Marketing Planner
 
-![Marketing](screenshots/marketing.png)
+![Marketing](screenshots/marketing.png.png)
 
 ---
 
