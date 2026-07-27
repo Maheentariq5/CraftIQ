@@ -13,7 +13,7 @@ The application is designed for entrepreneurs selling crochet products, handmade
 ## Live Demo
 
 **Application URL:**  
-[https://your-vercel-app.vercel.app](https://craftiq-ai-business-companion-for-handmade-en trep.ai.studio)
+https://craftiq-ai-business-companion-for-handmade-entrep.ai.studio
 
 ---
 
