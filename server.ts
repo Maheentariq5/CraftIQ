@@ -500,9 +500,14 @@ async function startServer() {
     });
   }
 
+
+}
+if (process.env.NODE_ENV !== "production") {
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`CraftIQ Server running on http://0.0.0.0:${PORT}`);
+    console.log(`CraftIQ Server running on http://localhost:${PORT}`);
   });
 }
+
+export default app;
 
 startServer();
