@@ -67,7 +67,7 @@ REQUIREMENTS:
 3. Provide realistic, low-cost unboxing ideas, brand color palette, and Etsy/Google SEO keywords relevant to this specific handmade item.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.6-flash",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
@@ -177,7 +177,7 @@ CRITICAL CALCULATIONS & PRACTICALITY:
 4. Provide a craft time-saving tip to reduce crafting time per unit and custom order deposit advice.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.6-flash",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
@@ -261,7 +261,7 @@ INSIGHT REQUIREMENTS:
 4. List specific online communities, hashtags, or channels where this customer hangs out.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.6-flash",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
@@ -341,7 +341,7 @@ FOCUS ON HANDMADE CREATOR REALITIES:
 4. Provide a 2-hour batching time-hack so the creator can spend most of their time crafting instead of managing social media.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.6-flash",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
@@ -461,7 +461,7 @@ app.post("/api/chat", async (req, res) => {
     }));
 
     const chat = ai.chats.create({
-      model: "gemini-3.6-flash",
+      model: "gemini-2.5-flash",
       config: {
         systemInstruction: `${SYSTEM_INSTRUCTION}
 
@@ -484,8 +484,8 @@ CHATBOT MENTORSHIP STYLE:
 });
 
 // Start Server & Vite Middleware setup
+// Start Server & Vite Middleware setup
 async function startServer() {
-  // Vite middleware for dev or Static file serve for prod
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
@@ -495,19 +495,15 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
+
     app.get("*", (req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
     });
   }
-
-
 }
+
 if (process.env.NODE_ENV !== "production") {
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`CraftIQ Server running on http://localhost:${PORT}`);
-  });
+  startServer();
 }
 
 export default app;
-
-startServer();
